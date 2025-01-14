@@ -1,0 +1,69 @@
+
+class Geometry:
+
+    def __init__(self,a,b,rad,h):
+        self.a = a
+        self.b = b
+        self.rad = rad
+        self.h = h
+
+    def area_rectangle(self):
+        return self.a*self.b
+    def perimeter_rectangle(self):
+        return 2*(self.a+self.b)
+    def area_square(self):
+        return self.a*self.b
+    def perimeter_square(self):
+        return 4*self.a
+    def area_circle(self):
+        return 3.14*self.rad*self.rad
+    def perimeter_circle(self):
+        return 2*3.14*self.rad
+    def volume_cyl(self):
+        return 3.14*self.rad*self.rad*self.h
+    def surf_area_cyl(self):
+        return 2*3.14*self.h(self.rad+self.h)
+    def area_triangle(self):
+        return 0.5*self.b*self.h
+
+x = int(input("please enter length :"))
+y = int(input("please enter breadth :"))
+r = int(input("please enter the radius :"))
+h = int(input("please enter the height :"))
+
+print(""" Welcome to the Geometrical world \n
+1. area of rectangle 
+2.perimeter of rectangle
+3. area of square
+4. perimeter of square
+5. area of circle
+6. perimeter of circle
+7. volume of cylinder
+8. surface area of cyl
+9. area of triangle
+""")
+
+choice = int(input("Enter your choice to perform any of the above operations"))
+g = Geometry(x,y,r,h);
+if choice==1:
+    print("area of rectangle is: ", g.area_rectangle())
+elif choice==2:
+    print("perimeter of rectangle is: ", g.perimeter_rectangle())
+elif choice==3:
+    print("area of square is :", g.area_square())
+elif choice==4:
+    print("perimeter of square is :", g.perimeter_square())
+elif choice==5:
+    print("area of circle :", g.area_circle())
+elif choice==6:
+    print("perimeter of curcle is :", g.perimeter_circle())
+elif choice==7:
+    print("volume of cylinder is: ", g.volume_cyl())
+elif choice==8:
+    print("surface area of cyl", g.surf_area_cyl())
+else :
+    print("area of triangle :", g.area_triangle())
+
+
+
+
